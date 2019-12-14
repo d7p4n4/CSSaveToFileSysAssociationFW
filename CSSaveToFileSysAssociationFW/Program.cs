@@ -32,7 +32,7 @@ namespace CSSaveToFileSysAssociationFW
             {
                 SaveToFileSysAssociationFW saveToFileSysAssociationFW = new SaveToFileSysAssociationFW(conn, TemplateName, outPath, outPathProcess, outPathSuccess, outPathError);
 
-                saveToFileSysAssociationFW.WriteOutAc4yObjectHome();
+                saveToFileSysAssociationFW.WriteOutAc4yAssociationAll();
                 /*
                 List<SerializationObject> xmls = getXmls.GetXmlsMethod(sqlConn, sqlConnXML, TemplateName);
                 foreach(var xml in xmls)

@@ -8,7 +8,7 @@ using System.Xml.Serialization;
 
 namespace CSSaveToFileSysAssociationFW
 {
-    class SaveToFileSysAssociationFW
+    public class SaveToFileSysAssociationFW
     {
 
         public SqlConnection sqlConn;
@@ -33,8 +33,17 @@ namespace CSSaveToFileSysAssociationFW
             sqlConn = new SqlConnection(sqlConnectionString);
             sqlConn.Open();
         }
+        
+        public SaveToFileSysAssociationFW(string newSqlConn, string newOut)
+        {
+            sqlConnectionString = newSqlConn;
+            outPath = newOut;
 
-        public void WriteOutAc4yObjectHome()
+            sqlConn = new SqlConnection(sqlConnectionString);
+            sqlConn.Open();
+        }
+
+        public void WriteOutAc4yAssociationAll()
         {
             Ac4yAssociationObjectService.ListInstanceResponse listInstanceResponse =
                 new Ac4yAssociationObjectService(sqlConn).ListInstance(

@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A411E8B8-1602-4741-AB2C-BB0C64B5E743}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>CSSaveToFileSysAssociationFW</RootNamespace>
     <AssemblyName>CSSaveToFileSysAssociationFW</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -32,21 +32,24 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CSAc4yFW">
-      <HintPath>C:\Library\LPCSharp\CSAc4yFW.dll</HintPath>
+      <HintPath>..\..\..\..\..\Library\c#\LPCSharp\CSAc4yFW.dll</HintPath>
     </Reference>
     <Reference Include="CSAc4yObjectDBCapFW">
-      <HintPath>C:\Library\LPCSharp\CSAc4yObjectDBCapFW.dll</HintPath>
+      <HintPath>..\..\..\..\..\Library\c#\LPCSharp\CSAc4yObjectDBCapFW.dll</HintPath>
     </Reference>
     <Reference Include="CSAc4yObjectObjectServiceFW">
-      <HintPath>C:\Library\LPCSharp\CSAc4yObjectObjectServiceFW.dll</HintPath>
+      <HintPath>..\..\..\..\..\Library\c#\LPCSharp\CSAc4yObjectObjectServiceFW.dll</HintPath>
     </Reference>
     <Reference Include="CSAc4yObjectServiceWF">
-      <HintPath>C:\Library\LPCSharp\CSAc4yObjectServiceWF.dll</HintPath>
+      <HintPath>..\..\..\..\..\Library\c#\LPCSharp\CSAc4yObjectServiceWF.dll</HintPath>
     </Reference>
     <Reference Include="CSAc4yServiceFW">
-      <HintPath>C:\Library\LPCSharp\CSAc4yServiceFW.dll</HintPath>
+      <HintPath>..\..\..\..\..\Library\c#\LPCSharp\CSAc4yServiceFW.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
