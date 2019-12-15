@@ -11,10 +11,11 @@ namespace CSSaveToFileSysAssociationFW
     public class SaveToFileSysAssociationFW
     {
 
-        public SqlConnection sqlConn;
+        public SqlConnection sqlConnection;
         public string sqlConnectionString;
         public string TemplateName;
         public string outPath;
+        public string defaultPath;
         public string outPathProcess;
         public string outPathSuccess;
         public string outPathError;
@@ -30,8 +31,8 @@ namespace CSSaveToFileSysAssociationFW
             outPathSuccess = newSucc;
             outPathError = newErr;
 
-            sqlConn = new SqlConnection(sqlConnectionString);
-            sqlConn.Open();
+            sqlConnection = new SqlConnection(sqlConnectionString);
+            sqlConnection.Open();
         }
         
         public SaveToFileSysAssociationFW(string newSqlConn, string newOut)
@@ -39,14 +40,14 @@ namespace CSSaveToFileSysAssociationFW
             sqlConnectionString = newSqlConn;
             outPath = newOut;
 
-            sqlConn = new SqlConnection(sqlConnectionString);
-            sqlConn.Open();
+            sqlConnection = new SqlConnection(sqlConnectionString);
+            sqlConnection.Open();
         }
 
         public void WriteOutAc4yAssociationAll()
         {
             Ac4yAssociationObjectService.ListInstanceResponse listInstanceResponse =
-                new Ac4yAssociationObjectService(sqlConn).ListInstance(
+                new Ac4yAssociationObjectService(sqlConnection).ListInstance(
                     new Ac4yAssociationObjectService.ListInstanceRequest() { }
                 );
 
